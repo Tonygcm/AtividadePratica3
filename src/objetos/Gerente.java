@@ -53,13 +53,13 @@ public class Gerente extends Funcionario {
 
     @Override
     public String relatarProgresso(){
-        return "";
+        return " ";
     }
 
     // método abstrato da superclasse
 
     @Override
     public double calcularSalario() {
-        return 0;
+        return getSalarioBruto() * getBonusAnual();
     }
 }

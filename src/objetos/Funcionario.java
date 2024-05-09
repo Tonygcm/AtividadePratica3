@@ -11,7 +11,7 @@ public abstract class Funcionario implements Trabalhavel{
 
     private String nome;
     private int matricula;
-    private double salario;
+    private double salarioBruto;
 
     // Construtores
 
@@ -19,10 +19,10 @@ public abstract class Funcionario implements Trabalhavel{
 
     }
     
-    public Funcionario(String nome, int matricula, double salario) {
+    public Funcionario(String nome, int matricula, double salarioBruto) {
         this.nome = nome;
         this.matricula = matricula;
-        this.salario = salario;
+        this.salarioBruto = salarioBruto;
     }
 
     // Getters and Setters
@@ -43,12 +43,12 @@ public abstract class Funcionario implements Trabalhavel{
         this.matricula = matricula;
     }
 
-    public double getSalario() {
-        return salario;
+    public double getSalarioBruto() {
+        return salarioBruto;
     }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
+    public void setSalarioBruto(double salarioBruto) {
+        this.salarioBruto = salarioBruto;
     }
 
     // toString
@@ -57,7 +57,7 @@ public abstract class Funcionario implements Trabalhavel{
     public String toString() {
 
         return "\nNome: " + nome + "\nMatrícula: " + matricula + 
-        "\nSalário: " + salario;
+        "\nSalário Bruto: " + salarioBruto;
 
     }
 
