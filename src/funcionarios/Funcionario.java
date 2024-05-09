@@ -1,6 +1,8 @@
 package funcionarios;
+import interfaces.Trabalhavel;
 
-public abstract class Funcionario {
+
+public abstract class Funcionario implements Trabalhavel{
 
     /*Crie uma classe abstrata Funcionario que atue como a superclasse para todos
     os tipos de funcionários. Esta classe deve conter atributos e métodos comuns
@@ -11,11 +13,48 @@ public abstract class Funcionario {
     private int matricula;
     private double salario;
 
+    public Funcionario(){
+
+    }
     
-    
+    public Funcionario(String nome, int matricula, double salario) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.salario = salario;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
 
 
+    @Override
+    public String toString() {
 
+        return "\nNome: " + nome + "\nMatrícula: " + matricula + 
+        "\nSalário: " + salario;
+
+    }
 
     public abstract double calcularSalario();
 
