@@ -1,4 +1,4 @@
-package funcionarios;
+package objetos;
 import interfaces.Trabalhavel;
 
 
@@ -13,6 +13,8 @@ public abstract class Funcionario implements Trabalhavel{
     private int matricula;
     private double salario;
 
+    // Construtores
+
     public Funcionario(){
 
     }
@@ -22,6 +24,8 @@ public abstract class Funcionario implements Trabalhavel{
         this.matricula = matricula;
         this.salario = salario;
     }
+
+    // Getters and Setters
 
     public String getNome() {
         return nome;
@@ -47,6 +51,7 @@ public abstract class Funcionario implements Trabalhavel{
         this.salario = salario;
     }
 
+    // toString
 
     @Override
     public String toString() {
@@ -55,6 +60,8 @@ public abstract class Funcionario implements Trabalhavel{
         "\nSalário: " + salario;
 
     }
+
+    // Método abstrato para os objetos
 
     public abstract double calcularSalario();
 

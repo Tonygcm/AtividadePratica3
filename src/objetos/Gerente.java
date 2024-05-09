@@ -1,10 +1,12 @@
-package funcionarios;
+package objetos;
 
 
 public class Gerente extends Funcionario {
 
     private double bonusAnual;
     private String equipeSobGerencia;
+
+    // Construtores
 
     public Gerente() {
         
@@ -15,6 +17,8 @@ public class Gerente extends Funcionario {
         this.bonusAnual = bonusAnual;
         this.equipeSobGerencia = equipeSobGerencia;
     }
+
+    // Getters and Setters
 
     public double getBonusAnual() {
         return bonusAnual;
@@ -32,11 +36,15 @@ public class Gerente extends Funcionario {
         this.equipeSobGerencia = equipeSobGerencia;
     }
 
+    // toString
+
     @Override
     public String toString() {
         return super.toString() + "\nBônus Anual: " + bonusAnual + 
         "\nEquipe que está gerenciando: " + equipeSobGerencia;
     }
+
+    // Métodos da interface
 
     @Override
     public String trabalhar(){
@@ -47,6 +55,8 @@ public class Gerente extends Funcionario {
     public String relatarProgresso(){
         return "";
     }
+
+    // método abstrato da superclasse
 
     @Override
     public double calcularSalario() {

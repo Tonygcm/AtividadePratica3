@@ -1,4 +1,4 @@
-package funcionarios;
+package objetos;
 
 
 public class Estagiario extends Funcionario {
@@ -6,7 +6,7 @@ public class Estagiario extends Funcionario {
     private String supervisor;
     private double horasTrabalhadas;
 
-    
+    // Construtores
 
     public Estagiario(){
 
@@ -17,6 +17,8 @@ public class Estagiario extends Funcionario {
         this.supervisor = supervisor;
         this.horasTrabalhadas = horasTrabalhadas;
     }
+
+    // Getters and Setters
 
     public String getSupervisor() {
         return supervisor;
@@ -34,6 +36,8 @@ public class Estagiario extends Funcionario {
         this.horasTrabalhadas = horasTrabalhadas;
     }
 
+    // toString
+
     @Override
     public String toString() {
 
@@ -41,6 +45,8 @@ public class Estagiario extends Funcionario {
         "\nHoras Trabalhadas: " + horasTrabalhadas;
 
     }
+
+    // métodos da interface
 
     @Override
     public String trabalhar(){
@@ -51,6 +57,8 @@ public class Estagiario extends Funcionario {
     public String relatarProgresso(){
         return "";
     }
+
+    // método abstrato da superclasse
 
     @Override
     public double calcularSalario() {

@@ -1,4 +1,4 @@
-package funcionarios;
+package objetos;
 
 
 
@@ -6,7 +6,8 @@ public class Desenvolvedor extends Funcionario {
 
     private String tecnologias;
 
-    
+    // Construtores
+
     public Desenvolvedor() {
         
     }
@@ -16,6 +17,8 @@ public class Desenvolvedor extends Funcionario {
         this.tecnologias = tecnologias;
     }
 
+    // Getters and Setters
+
     public String getTecnologias() {
         return tecnologias;
     }
@@ -24,10 +27,14 @@ public class Desenvolvedor extends Funcionario {
         this.tecnologias = tecnologias;
     }
 
+    // toString
+
     @Override
     public String toString() {
         return super.toString() + "\nTecnologias: " + tecnologias;
     }
+
+    // Métodos da interface
 
     @Override
     public String trabalhar(){
@@ -38,6 +45,8 @@ public class Desenvolvedor extends Funcionario {
     public String relatarProgresso(){
         return "";
     }
+
+    // método abstrato da superclasse  
 
     @Override
     public double calcularSalario() {
