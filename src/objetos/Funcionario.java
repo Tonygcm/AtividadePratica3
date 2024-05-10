@@ -11,7 +11,7 @@ public abstract class Funcionario implements Trabalhavel{
 
     private String nome;
     private int matricula;
-    private double salarioBruto;
+    private float salarioBruto;
 
     // Construtores
 
@@ -19,7 +19,7 @@ public abstract class Funcionario implements Trabalhavel{
 
     }
     
-    public Funcionario(String nome, int matricula, double salarioBruto) {
+    public Funcionario(String nome, int matricula, float salarioBruto) {
         this.nome = nome;
         this.matricula = matricula;
         this.salarioBruto = salarioBruto;
@@ -43,11 +43,11 @@ public abstract class Funcionario implements Trabalhavel{
         this.matricula = matricula;
     }
 
-    public double getSalarioBruto() {
+    public float getSalarioBruto() {
         return salarioBruto;
     }
 
-    public void setSalarioBruto(double salarioBruto) {
+    public void setSalarioBruto(float salarioBruto) {
         this.salarioBruto = salarioBruto;
     }
 
@@ -63,6 +63,6 @@ public abstract class Funcionario implements Trabalhavel{
 
     // Método abstrato para os objetos
 
-    public abstract double calcularSalario();
+    public abstract float calcularSalario();
 
 }

@@ -4,7 +4,7 @@ package objetos;
 public class Estagiario extends Funcionario {
 
     private String supervisor;
-    private double horasTrabalhadas;
+    private float horasTrabalhadas;
 
     // Construtores
 
@@ -12,7 +12,7 @@ public class Estagiario extends Funcionario {
 
     }
 
-    public Estagiario(String nome, int matricula, double salario, String supervisor, double horasTrabalhadas) {
+    public Estagiario(String nome, int matricula, float salario, String supervisor, float horasTrabalhadas) {
         super(nome, matricula, salario);
         this.supervisor = supervisor;
         this.horasTrabalhadas = horasTrabalhadas;
@@ -28,11 +28,11 @@ public class Estagiario extends Funcionario {
         this.supervisor = supervisor;
     }
 
-    public double getHorasTrabalhadas() {
+    public float getHorasTrabalhadas() {
         return horasTrabalhadas;
     }
 
-    public void setHorasTrabalhadas(double horasTrabalhadas) {
+    public void setHorasTrabalhadas(float horasTrabalhadas) {
         this.horasTrabalhadas = horasTrabalhadas;
     }
 
@@ -55,14 +55,14 @@ public class Estagiario extends Funcionario {
 
     @Override
     public String relatarProgresso(){
-        return "";
+        return "\nO Estagiário " + getNome() + ", está pronto para reportar ao Supervisor.";
     }
 
     // método abstrato da superclasse
 
     @Override
-    public double calcularSalario() {
-        return 0;
+    public float calcularSalario() {
+        return getSalarioBruto() * horasTrabalhadas;
     }
 
     

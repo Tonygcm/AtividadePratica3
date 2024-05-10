@@ -12,7 +12,7 @@ public class Desenvolvedor extends Funcionario {
         
     }
 
-    public Desenvolvedor(String nome, int matricula, double salario, String tecnologias) {
+    public Desenvolvedor(String nome, int matricula, float salario, String tecnologias) {
         super(nome, matricula, salario);
         this.tecnologias = tecnologias;
     }
@@ -43,13 +43,13 @@ public class Desenvolvedor extends Funcionario {
 
     @Override
     public String relatarProgresso(){
-        return "";
+        return "\nO Desenvolvedor " + getNome() + ", está pronto para reportar os commits relaizados.";
     }
 
     // método abstrato da superclasse  
 
     @Override
-    public double calcularSalario() {
-        return 0;
+    public float calcularSalario() {
+        return getSalarioBruto();
     }
 }

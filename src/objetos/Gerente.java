@@ -3,7 +3,7 @@ package objetos;
 
 public class Gerente extends Funcionario {
 
-    private double bonusAnual;
+    private float bonusAnual;
     private String equipeSobGerencia;
 
     // Construtores
@@ -12,7 +12,7 @@ public class Gerente extends Funcionario {
         
     }
 
-    public Gerente(String nome, int matricula, double salario, double bonusAnual, String equipeSobGerencia) {
+    public Gerente(String nome, int matricula, float salario, float bonusAnual, String equipeSobGerencia) {
         super(nome, matricula, salario);
         this.bonusAnual = bonusAnual;
         this.equipeSobGerencia = equipeSobGerencia;
@@ -20,11 +20,11 @@ public class Gerente extends Funcionario {
 
     // Getters and Setters
 
-    public double getBonusAnual() {
+    public float getBonusAnual() {
         return bonusAnual;
     }
 
-    public void setBonusAnual(double bonusAnual) {
+    public void setBonusAnual(float bonusAnual) {
         this.bonusAnual = bonusAnual;
     }
 
@@ -53,13 +53,13 @@ public class Gerente extends Funcionario {
 
     @Override
     public String relatarProgresso(){
-        return " ";
+        return "\nO Gerente " + getNome() + ", está pronto para reportar o progresso da equipe.";
     }
 
     // método abstrato da superclasse
 
     @Override
-    public double calcularSalario() {
+    public float calcularSalario() {
         return getSalarioBruto() * getBonusAnual();
     }
 }
